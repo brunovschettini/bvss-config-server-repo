@@ -6,8 +6,8 @@ spring:
     datasource:
         url: "jdbc:h2:mem:db-bvss"
         driverClassName: org.h2.Driver
-        username: sa
-        password: password
+        username:
+        password:
     jpa.database-platform: org.hibernate.dialect.H2Dialect
 
 server:
