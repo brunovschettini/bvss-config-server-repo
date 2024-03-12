@@ -10,3 +10,12 @@ server:
     port: 5000
     servlet:
         context-path: /bvss-es6-api-estoque
+        
+openapi:
+    info:
+        title: API Estoque ES6
+        version: 1.0.0
+        description: ?? - API Swagger documentation
+        license:
+            name: Apache 2.0
+            url: http://springdoc.org
