@@ -1,9 +1,0 @@
-# DATASOURCE
-spring:
-    application:
-        name: bvss-cz8-api-bff-produto
-
-server:
-    port: 5001
-    servlet:
-        context-path: /bvss-cz8-api-bff-produto
