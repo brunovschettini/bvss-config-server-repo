@@ -1,8 +1,4 @@
-# DATASOURCE
 spring:
-    application:
-        name: bvss-es6-api-estoque
-
     datasource:
         url: "jdbc:h2:mem:db-bvss"
         driverClassName: org.h2.Driver
@@ -14,9 +10,3 @@ server:
     port: 5000
     servlet:
         context-path: /bvss-es6-api-estoque
-
-# H2
-h2:
-    console:
-        enabled: true
-        path: /h2-console
