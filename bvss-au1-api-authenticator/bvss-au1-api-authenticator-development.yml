@@ -1,0 +1,50 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /${spring.application.name}
+
+logging:
+  level:
+    org.springframework.security: trace
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/credentials
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSOWORD}
+
+  # JPA
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+        # ddl-auto: validate
+        ddl-auto: create
+    defer-datasource-initialization: true
+    show-sql: true
+
+security:
+  oauth2:
+    resource:
+      id: bcrypt
+
+# App Properties
+application:
+  security:
+    jwt:
+      secret-key: v8WB0FyWrBTm099u3LIyIuxsSgIH0Gus26h8WSltkc5QOoZl1sdwJG9ftqPBKLcw
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+
+openapi:
+  info:
+    title: API Authenticator AU1
+    version: 1.0.0
+    description: ?? - API Swagger documentation
+    license:
+      name: Apache 2.0
+      url: http://springdoc.org
